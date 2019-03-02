@@ -32,19 +32,13 @@ with tempfile.TemporaryFile() as tempf:
     for line in tempf :
     	if stringToMatch in line:
     		matchedLine = line
-    		print matchedLine
-    		with open("plates.txt", "a") as text_file:
+    		print matchedLine  #Displays on terminal only the plate
+    		with open("plates.txt", "a") as text_file: 
     			text_file.writelines(matchedLine + "\r\n") 
- 		#file.write(matchedLine "%d\r\n" % )
  			text_file.close()
     		
     		 
- 	#continue
-    		
-    #	elif  stringToMatch not in line:
-    
-	#	print("Error");
-		
+ 	
    
    
    
