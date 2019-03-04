@@ -8,7 +8,7 @@ Video= 'alpr_video.py'
 
 
 ## You can modify these:
-N_API='b94e5931100d7f8464d029fb8be37960e3ad520a'
+N_API='YOUR_API'
 mode=  Bild #Video
 Ort_v= '../../video/addr'
 Ort_f= '../../photo/addr'
