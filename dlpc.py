@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import subprocess
 import tempfile
-
+import time
+import os
 
 Bild= 'plate_recognition.py'
 Video= 'alpr_video.py'
