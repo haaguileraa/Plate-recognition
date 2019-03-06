@@ -23,6 +23,10 @@ jf='2'  #Jump between fotogramms
 #	           |
 #	           v
 
+#____________DON'T CHANGE___________#
+#	           |
+#	           v
+
 stringToMatch = '"plate": ' #What do you want to search
 stringError= 'Traceback'
 matchedLine = ''
@@ -40,18 +44,19 @@ if mode == Video:
     		tempf.seek(0)
     		#print tempf.read() #Want to print everything? uncomennt
     		
-    		
+    		open("placas.txt", "w").close
+    		open('placas2.txt', 'w').close()
     		for line in tempf :
     			if stringToMatch in line:
     				matchedLine = line
     				print matchedLine
     				with open("placas.txt", "a") as text_file:
-    					text_file.writelines(matchedLine + "\r\n") 
+    					text_file.writelines(matchedLine) #+ "\r\n") 
  					#file.write(matchedLine "%d\r\n" % )
  					text_file.close()
  				
 	
-			elif stringError in line:  
+			elif stringError in line: 
 				print error
 			
 			
@@ -70,20 +75,39 @@ elif mode == Bild:
     		tempf.seek(0)
 		#print tempf.read() #Want to print everything? uncomennt
 		
-		
+		open("placas.txt", "w").close
+		open('placas2.txt', 'w').close
 		for line in tempf :
     			if stringToMatch in line:
     				matchedLine = line
     				print matchedLine
     				with open("placas.txt", "a") as text_file:
-    					text_file.writelines(matchedLine + "\r\n") 
+    					text_file.writelines(matchedLine )#+ "\r\n") 
  					#file.write(matchedLine "%d\r\n" % )
  					text_file.close()
  				
 	
 			elif stringError in line: 
 				print error
-				
+		
+
+		
+
+mull1='"plate": "' 
+mull2='",' 			
+with  open('placas.txt', 'r') as placas1_txt:
+	for line2 in placas1_txt:
+		with open("placas2.txt", "a") as placas2_txt: 
+			#print line2.replace(mull, '')
+			plate = line2.replace(mull1, '')
+			plate2 = plate.replace(mull2, '')
+			#print plate2
+			placas2_txt.writelines(plate2)
+		placas2_txt.close()
+
+
+os.system('python parce.py')
+
 			
 
 	
