@@ -1,5 +1,8 @@
 # Plate-recognition
-Plate recognition using Marc Belmont's API
+Plate recognition API
+This is the repository for "TPI-UN Monitoreo Vehicular".
 
 
-This is the repository that you want to use with dlpc.py file https://github.com/marcbelmont/deep-license-plate-recognition
+
+Special thanks to Marc Belmont:
+https://github.com/marcbelmont/deep-license-plate-recognition
