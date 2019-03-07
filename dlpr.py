@@ -18,11 +18,8 @@ Ort_f= '../../photo/addr'
 ff='0'  #First fotogramm
 ef='10' #Last fotogram
 jf='2'  #Jump between fotogramms
+## ef/jf=#fotogramms to send
 
-
-#____________DON'T CHANGE___________#
-#	           |
-#	           v
 
 #____________DON'T CHANGE___________#
 #	           |
