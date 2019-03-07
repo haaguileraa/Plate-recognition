@@ -13,9 +13,8 @@ MASTER_KEY = 'MASTERK'
 
 register(APPLICATION_ID, REST_API_KEY, master_key=MASTER_KEY)
 
-u = User.login("test@gmail.com", "1234567890")
+u = User.login("test_user", "1234567890")
 
-#Hacer un get
 
 from parse_rest.datatypes import File
 
